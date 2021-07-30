@@ -1,13 +1,9 @@
 package hello
 
-import "fmt"
+import (
+	"fmt"
 
-const (
-	spanish      = "Spanish"
-	french       = "French"
-	englishHello = "Hello"
-	spanishHello = "Hola"
-	frenchHello  = "Bonjour"
+	"github.com/jasonnchann24/learn-go-with-tests/consts"
 )
 
 func Hello(name string, language string) string {
@@ -20,12 +16,12 @@ func Hello(name string, language string) string {
 
 func prefixSwitcher(language string) (prefix string) {
 	switch language {
-	case spanish:
-		prefix = spanishHello
-	case french:
-		prefix = frenchHello
+	case consts.Spanish:
+		prefix = consts.SpanishHello
+	case consts.French:
+		prefix = consts.FrenchHello
 	default:
-		prefix = englishHello
+		prefix = consts.EnglishHello
 	}
 
 	prefix += ", "
